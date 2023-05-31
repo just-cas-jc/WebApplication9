@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication9</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication9.styles.css" asp-append-version="true" />
+</head>
+<body>
+     <div class="wrapper">
+    <header class="header">
+        <div class="header__wrapper width__max">
+                <div class="head__logo">
+                    <p class="logo"><a asp-area="" asp-page="/Index">SEND<span>ME</span></a></p>
+                </div>
+                <div class="head__menu">
+                    <ul class="menu">
+                        <li><a asp-area="" asp-page="/Index">Home</a></li>
+                        <li><a asp-area="" asp-page="/Privacy">Privacy</a></li>
+                        <li><a asp-area="" asp-page="/NewPage">Payment</a></li>
+                    </ul>
+                </div>
+                <div class="head__login">
+					<partial name="_LoginPartial" />
+                </div>
+            </div>
+    </header>
+    <div class="container">
+        <main role="main" class="main width__max">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="width__max">
+                <div class="footer__top">
+                    <div class="footer__logo">
+                        <p class="logo"><a href="/">SEND<span>ME</span></a></p>
+                    </div>
+                    <div class="footer__contact">
+                        <p class="phone">
+                            7 777 77 77
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/be2a428366.js" crossorigin="anonymous"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    </div>
+</body>
+</html>

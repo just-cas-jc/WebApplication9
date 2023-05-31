@@ -1,0 +1,16 @@
+﻿@page
+@model WebApplication9.Pages.NewPageModel
+
+<form method="post">
+    <input asp-for="Name" placeholder="Write name"/>
+    <input asp-for="Number" placeholder="Write sum of transfer"/>
+    <button class="btn btn-blue" type="submit">Send</button>
+</form>
+
+@foreach (var item in Model.Items)
+{
+    <p>Transfer id: @item.Id</p>
+    <p>Name: @item.Name</p>
+    <p>Sum of transfer: @item.Number $</p>
+    <hr/>
+}
